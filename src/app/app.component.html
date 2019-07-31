@@ -1,20 +1,84 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div align="center">
+  <img style="width: 75%; height: 200px;" alt="Angular Logo" src="../assets/imagenes/a3.jpg">
+
+</div>
+<nav class="navbar navbar-expand-sm bg-dark"  >
+  
+  <!-- Links -->
+  <ul class="navbar-nav"  >
+      <li  style="width: 90px ;">
+        </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <strong><i><font face="Arial,Verdana" size=5&gt; color="White" >Aerolínea </font></i></strong>
+            
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item"  (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Avianca </font></i></strong></a>
+            <a class="dropdown-item"  (click)="botonIberia()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Iberia </font></i></strong></a>
+            <a class="dropdown-item"  (click)="botonTame()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Tame </font></i></strong></a>
+            
+          </div>
+        </li>
+        <li  style="width: 90px ;">
+          </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <strong><i><font face="Arial,Verdana" size=5&gt; color="White" >Tipo </font></i></strong>
+              
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item"  (click)="botonAvionTerrestre()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Avión terrestre </font></i></strong></a>
+                <a class="dropdown-item"  (click)="botonHidroavion()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Hidroavión </font></i></strong></a>
+                <a class="dropdown-item"  (click)="botonAnfibio()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Anfibio </font></i></strong></a>
+             
+            </div>
+          </li>
+          <li  style="width: 90px ;">
+            </li>
+  </ul>
+  
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 200px ;">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    
+</nav>
+
+
+
+<!--
+<div  align="center" *ngIf="mostrarRama == false">  
+    <app-rama1></app-rama1>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="refrescar()">Return</button>
+    </div>
+-->
+    <br>
+
+<div>
+      <div class="grid-container" >
+ 
+
+
+        <div class="grid-item" *ngFor="let message of messages">
+            <img width="280px" height="280px"  src={{message.imagen1}}>
+            <table align="center">
+                <td>
+                   <tr width="100px" height="100px"><strong><i><font face="Arial,Verdana" size=4&gt; color="Black" >{{message.nombre}}<br>{{message.precio}}</font></i></strong></tr>
+                   <div *ngIf="message.destacado == true">
+                    <img style="width: 10px; height: 10px;"  src="../assets/imagenes/a3.jpg">
+                   </div>
+                   
+                </td>
+             </table>
+           
+            
+    
+        </div>
+    
+        
+    
+       
+    </div>
+  </div>
