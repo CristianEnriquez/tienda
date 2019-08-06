@@ -12,6 +12,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {NgbCarouselConfig, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -33,10 +34,10 @@ export class AppComponent {
   filePreview4: string
 
 
-  hero: String;
+
   nombreAvion: String;
 
-  title = 'florida';
+
   mostrarRama = true;
 articuloElegido = false;
   items: Observable<any[]>;
@@ -52,6 +53,7 @@ articuloElegido = false;
    tipo;
    aerolinea;
    precio;
+   destacado;
    
   
    fileData: File = null;
@@ -170,7 +172,7 @@ this.consultaInicio();
     
   });
   }
-  botonAnfivion(){
+  botonAnfibio(){
     let messagesRef = firebase
     .database()
     .ref("/aviones")
@@ -328,10 +330,18 @@ sendMessage() {
      
         messageRef.push({
          //   nombre: "" + this.userName,
-     
+        imagen1:""+this.filePreview1,
+        imagen2:""+this.filePreview2,
+        imagen3:""+this.filePreview3,
+        imagen4:""+this.filePreview4,
+        nombre:""+this.nombreAvion,
+        tipo:"Hidroavión",
+        aerolinea:"Tame",
+        precio:"25$",
+        destacado:""
         });
 
-    
+    console.log("Mensaje enviado");
     
 
   
@@ -352,7 +362,7 @@ consultaInicio(){
  },(err)=>{ console.log("probleme : ", err) }), {
     query: {
       orderByChild: 'destacado',
-      equalTo: 'true',
+      equalTo: "",
     }
   }
 }
@@ -378,7 +388,8 @@ buscarNombre(){
 }
 
 fin(){
-  console.log('heroe '+this.hero)
+ 
+  this.sendMessage()
 }
 
 }

@@ -4,6 +4,8 @@ import {NgbCarouselConfig, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
+
 //import { Rama1Component } from './componentes/rama1/rama1.component';
 
 import { AngularFireModule } from '@angular/fire';
@@ -25,7 +27,8 @@ import { environment } from '../environments/environment.prod';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireStorageModule,
+    AngularFireStorageModule
+   
   ],
   
   providers: [NgbCarouselConfig],

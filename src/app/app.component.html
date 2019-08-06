@@ -9,7 +9,7 @@
   <!-- Links -->
   <ul class="navbar-nav"  >
       <li  style="width: 90px ;">
-          <a class="dropdown-item"  (click)="consultaInicio()"><strong><i><font face="Arial,Verdana" size=6&gt; color="White" >Inició </font></i></strong></a>
+          <a class="dropdown-item"  (click)="consultaInicio()"><strong><i><font face="Arial,Verdana" size=6&gt; color="White" >Raíz</font></i></strong></a>
         </li>
         <li  style="width: 90px ;"></li>
       <li class="nav-item dropdown">
@@ -82,6 +82,7 @@
        
     </div>
   </div>
+  
   <div class="grid-container2"  *ngIf="articuloElegido == true">
 
 
@@ -138,8 +139,9 @@
       <button type="button" class="btn btn-primary" (click)="articuloSelect()">Regresar</button>
       
   </div>
-
 </div>
+
+<!--
 <br>
 
   <div class="form-group row" style="left: 300px" align="center">
@@ -172,10 +174,66 @@
         </tr>
 </td>
   </table>
+  <br>
   <div>
     <label>name:
-      <input [(ngModel)]="hero" placeholder="name"/>
+      <input [(ngModel)]="nombreAvion" placeholder="name"/>
     </label>
-    <button type="button" class="btn btn-primary" (click)="fin()">emviar</button>
+    <button type="button" class="btn btn-primary" (click)="fin()">Enviar</button>
       
   </div>
+
+<br>
+-->
+<div class="grid-container3" align="center" >
+ 
+    <strong><i><font face="Arial,Verdana" size=8&gt; color="White" >Contactanos</font></i></strong>
+   
+    <br>
+<tr>
+  <td>
+
+      <a href="https://www.facebook.com/luisivan.enriquez" >
+        
+          <img  width="350px" height="100px" src="../assets/imagenes/fa.png">
+         
+      </a>
+    
+  </td>
+  <td>
+      <a href="https://api.whatsapp.com/send?phone=593997630505" >
+              
+        <img  width="100px" height="100px" src="../assets/imagenes/wh.png">
+       
+    </a>
+  </td>
+ 
+</tr>
+<tr>
+    <br>
+  </tr>
+    <tr>
+      
+        <td>
+            <img  width="100px" height="100px" src="../assets/imagenes/co.png">
+            <strong><i><font face="Arial,Verdana" size=7&gt; color="White" >wwe@gmail.com</font></i></strong>
+        </td>
+        <td>
+                         
+            <img  width="100px" height="100px" src="../assets/imagenes/te.png">
+            <strong><i><font face="Arial,Verdana" size=7&gt; color="White" >09 9763 0505</font></i></strong>
+                
+      </td>
+    </tr>
+      <table align="center">
+      
+       </table>
+     
+      
+
+
+  
+
+ 
+</div>
+  
