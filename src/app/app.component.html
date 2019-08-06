@@ -9,7 +9,9 @@
   <!-- Links -->
   <ul class="navbar-nav"  >
       <li  style="width: 90px ;">
+          <a class="dropdown-item"  (click)="consultaInicio()"><strong><i><font face="Arial,Verdana" size=6&gt; color="White" >Inició </font></i></strong></a>
         </li>
+        <li  style="width: 90px ;"></li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <strong><i><font face="Arial,Verdana" size=5&gt; color="White" >Aerolínea </font></i></strong>
@@ -39,9 +41,9 @@
           <li  style="width: 90px ;">
             </li>
   </ul>
-  
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 200px ;">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+      <input [(ngModel)]="nombreAvion" class="form-control mr-sm-2" type="search" placeholder="Nombre" aria-label="Search" style="width: 200px ;">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="buscarNombre()">Buscar</button>
     
 </nav>
 
@@ -66,10 +68,8 @@
             <table align="center">
                 <td>
                    <tr width="100px" height="100px"><strong><i><font face="Arial,Verdana" size=4&gt; color="Black" >{{message.nombre}}<br>{{message.precio}}</font></i></strong></tr>
-                  <!-- <div *ngIf="{{message.destacado}} == true">
-                    <img style="width: 10px; height: 10px;"  src="../assets/imagenes/a3.jpg">
-                   </div>
-                -->
+                   <strong><i><font face="Arial,Verdana" size=5&gt; color="Red" >{{message.destacado}} </font></i></strong>
+                
                 </td>
              </table>
            
@@ -92,32 +92,29 @@
           </div>
           
             <ngb-carousel *ngIf="images">
-              <ng-template ngbSlide>
+              <ng-template  ngbSlide>
                 <img  width="500px" height="500px" [src]="images[0]" alt="Random first slide">
-                <div class="carousel-caption">
-                  <h3>2 seconds between slides...</h3>
-                  <p>This carousel uses customized default values.</p>
+                <div class="carousel-caption" >
+              <!--    <h3>2 seconds between slides...</h3>
+                  <p>This carousel uses customized default values.</p> -->
                 </div>
               </ng-template>
               <ng-template ngbSlide>
                 <img width="500px" height="500px" [src]="images[1]" alt="Random second slide">
                 <div class="carousel-caption">
-                  <h3>Mouse events...</h3>
-                  <p>This carousel pause or resume on mouse events</p>
+        
                 </div>
               </ng-template>
               <ng-template ngbSlide>
                 <img width="500px" height="500px" [src]="images[2]"  alt="Random third slide">
                 <div class="carousel-caption">
-                  <h3>No keyboard...</h3>
-                  <p>This carousel uses customized default values.</p>
+         
                 </div>
               </ng-template>
               <ng-template ngbSlide>
                 <img width="500px" height="500px" [src]="images[3]" alt="Random fourth slide">
                 <div class="carousel-caption">
-                  <h3>And wrap after last slide.</h3>
-                  <p>This carousel uses customized default values.</p>
+             
                 </div>
               </ng-template>
             </ngb-carousel>
@@ -129,14 +126,23 @@
 
   </div>
   <div>
-    <h1>{{nombre}}</h1>
-    <h1>{{tipo}}</h1>
-    <h1>{{aerolinea}}</h1>
-    <h1>{{precio}}</h1>
+    <h4 style="color:red;">Nombre</h4>
+      <strong><i><font face="Arial,Verdana" size=7&gt; color="Black" > {{nombre}} </font></i></strong><br>
+      <h4 style="color:red;">Tipo</h4>
+      <strong><i><font face="Arial,Verdana" size=7&gt; color="Black" > {{tipo}} </font></i></strong><br>
+      <h4 style="color:red;">Aerolinea</h4>
+      <strong><i><font face="Arial,Verdana" size=7&gt; color="Black" > {{aerolinea}} </font></i></strong><br>
+      <h4 style="color:red;">Precio</h4>
+      <strong><i><font face="Arial,Verdana" size=7&gt; color="Black" > {{precio}} </font></i></strong><br>
+    <br>
+      <button type="button" class="btn btn-primary" (click)="articuloSelect()">Regresar</button>
+      
   </div>
 
 </div>
-<div class="form-group row">
+<br>
+
+  <div class="form-group row" style="left: 300px" align="center">
   <table>
 <td>
   
@@ -166,5 +172,10 @@
         </tr>
 </td>
   </table>
-  
-</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero" placeholder="name"/>
+    </label>
+    <button type="button" class="btn btn-primary" (click)="fin()">emviar</button>
+      
+  </div>

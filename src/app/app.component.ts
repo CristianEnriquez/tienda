@@ -33,8 +33,8 @@ export class AppComponent {
   filePreview4: string
 
 
-
-
+  hero: String;
+  nombreAvion: String;
 
   title = 'florida';
   mostrarRama = true;
@@ -65,24 +65,8 @@ articuloElegido = false;
     config.keyboard = false;
     config.pauseOnHover = true;
  
-    this.db.list('/aviones').valueChanges().subscribe((items) =>
-    { 
-     
-     this.messages = [];
-   
-       
-     for (let key in items) {
-         this.messages.push(items[key]);
-     }
-   
-     console.log("seraaaaaa ", this.messages)
-   },(err)=>{ console.log("probleme : ", err) }), {
-      query: {
-        orderByChild: 'destacado',
-        equalTo: 'true',
-      }
-    }
-
+  
+this.consultaInicio();
    }
    sera(){
     if (this.mostrarRama==false){
@@ -101,7 +85,7 @@ articuloElegido = false;
     .database()
     .ref("/aviones")
     .orderByChild("aerolinea")
-    .equalTo("avianca");
+    .equalTo("Avianca");
 
     messagesRef.on("value", snap => {
       let data = snap.val();
@@ -119,7 +103,7 @@ articuloElegido = false;
     .database()
     .ref("/aviones")
     .orderByChild("aerolinea")
-    .equalTo("iberia");
+    .equalTo("Iberia");
 
     messagesRef.on("value", snap => {
       let data = snap.val();
@@ -137,7 +121,7 @@ articuloElegido = false;
     .database()
     .ref("/aviones")
     .orderByChild("aerolinea")
-    .equalTo("tame");
+    .equalTo("Tame");
 
     messagesRef.on("value", snap => {
       let data = snap.val();
@@ -155,7 +139,7 @@ articuloElegido = false;
     .database()
     .ref("/aviones")
     .orderByChild("tipo")
-    .equalTo("avionterrestre");
+    .equalTo("Avión terrestre");
 
     messagesRef.on("value", snap => {
       let data = snap.val();
@@ -173,7 +157,7 @@ articuloElegido = false;
     .database()
     .ref("/aviones")
     .orderByChild("tipo")
-    .equalTo("hidroavion");
+    .equalTo("Hidroavión");
 
     messagesRef.on("value", snap => {
       let data = snap.val();
@@ -191,7 +175,7 @@ articuloElegido = false;
     .database()
     .ref("/aviones")
     .orderByChild("tipo")
-    .equalTo("anfivio");
+    .equalTo("Anfibio");
 
     messagesRef.on("value", snap => {
       let data = snap.val();
@@ -224,7 +208,7 @@ this.precio=precio;
     if(this.articuloElegido==false){
       this.articuloElegido=true;
     }else{
-      this.articuloElegido=true
+      this.articuloElegido=false
     }
     
   }
@@ -334,5 +318,67 @@ onFileChanged4(event) {
 }
 
 
+sendMessage() {
+
+  
+        let messageRef = firebase
+            .database()
+            .ref()
+            .child("aviones");
+     
+        messageRef.push({
+         //   nombre: "" + this.userName,
+     
+        });
+
+    
+    
+
+  
+}
+
+consultaInicio(){
+  this.db.list('/aviones').valueChanges().subscribe((items) =>
+  { 
+   
+   this.messages = [];
+ 
+     
+   for (let key in items) {
+       this.messages.push(items[key]);
+   }
+ 
+   console.log("seraaaaaa ", this.messages)
+ },(err)=>{ console.log("probleme : ", err) }), {
+    query: {
+      orderByChild: 'destacado',
+      equalTo: 'true',
+    }
+  }
+}
+
+buscarNombre(){
+  let nom = this.nombreAvion.toString
+  let messagesRef = firebase
+  .database()
+  .ref("/aviones")
+  .orderByChild("nombre")
+  .equalTo(this.nombreAvion+'');
+
+  messagesRef.on("value", snap => {
+    let data = snap.val();
+    this.messages = [];
+
+      
+    for (let key in data) {
+        this.messages.push(data[key])
+    }
+  
+});
+}
+
+fin(){
+  console.log('heroe '+this.hero)
+}
 
 }

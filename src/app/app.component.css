@@ -36,3 +36,7 @@
     background-color: rgb(174, 220, 247);
     padding: 10px;
   }
+  .form-group{
+    left: 300px;
+    justify-content: center;
+  }

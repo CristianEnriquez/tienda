@@ -10,6 +10,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
+import { FormsModule } from '@angular/forms';
+
 import { environment } from '../environments/environment.prod';
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { environment } from '../environments/environment.prod';
     HttpClientModule,
     NgbModule,
     BrowserModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
