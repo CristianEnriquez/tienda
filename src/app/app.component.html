@@ -82,7 +82,7 @@
        
     </div>
   </div>
-  <div *ngIf="articuloElegido == true">
+  <div class="grid-container2"  *ngIf="articuloElegido == true">
 
 
 
@@ -128,8 +128,43 @@
 
 
   </div>
-<h1>{{nombre}}</h1>
-<h1>{{tipo}}</h1>
-<h1>{{aerolinea}}</h1>
-<h1>{{precio}}</h1>
+  <div>
+    <h1>{{nombre}}</h1>
+    <h1>{{tipo}}</h1>
+    <h1>{{aerolinea}}</h1>
+    <h1>{{precio}}</h1>
+  </div>
+
+</div>
+<div class="form-group row">
+  <table>
+<td>
+  
+    <tr>     <input  type="file" name="image" (change)="onFileChanged1($event)">
+      <div class="info" *ngIf="filePreview1">
+          <img width="280px" height="280px" src="{{filePreview1}}"/>
+      </div>
+      </tr>
+      <tr>     <input  type="file" name="image" (change)="onFileChanged2($event)">
+        <div class="info" *ngIf="filePreview2">
+            <img width="280px" height="280px" src="{{filePreview2}}"/>
+        </div>
+        </tr>
+
+
+</td>
+<td>
+    <tr>     <input  type="file" name="image" (change)="onFileChanged3($event)">
+      <div class="info" *ngIf="filePreview3">
+          <img width="280px" height="280px" src="{{filePreview3}}"/>
+      </div>
+      </tr>
+      <tr>     <input  type="file" name="image" (change)="onFileChanged4($event)">
+        <div class="info" *ngIf="filePreview4">
+            <img width="280px" height="280px" src="{{filePreview4}}"/>
+        </div>
+        </tr>
+</td>
+  </table>
+  
 </div>

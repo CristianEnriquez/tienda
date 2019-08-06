@@ -1,15 +1,41 @@
-import { Component } from '@angular/core';
+
+import {Component, NgModule, VERSION, Input, OnInit} from '@angular/core'
+import { HttpClient } from '@angular/common/http';
+import { FormGroup } from "@angular/forms";
 import { AngularFireDatabase } from '@angular/fire/database';
 import * as firebase from "firebase";
-import { Observable } from 'rxjs'
+import { Observable, empty, } from 'rxjs';
+
+import {BrowserModule} from '@angular/platform-browser'
+import {DomSanitizer} from '@angular/platform-browser';
+
 import {NgbCarouselConfig, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [NgbCarouselConfig] 
+  providers: [NgbCarouselConfig ] 
+ 
 })
 export class AppComponent {
+
+
+//imagenes
+
+  filePreview1: string
+ 
+  filePreview2: string
+  
+  filePreview3: string
+
+  filePreview4: string
+
+
+
+
+
   title = 'florida';
   mostrarRama = true;
 articuloElegido = false;
@@ -26,7 +52,14 @@ articuloElegido = false;
    tipo;
    aerolinea;
    precio;
-  constructor(public db: AngularFireDatabase, config: NgbCarouselConfig) {
+   
+  
+   fileData: File = null;
+   previewUrl:any = null;
+   fileUploadProgress: string = null;
+   uploadedFilePath: string = null;
+
+  constructor(private http: HttpClient,public db: AngularFireDatabase, config: NgbCarouselConfig,private sanitizer: DomSanitizer) {
     config.interval = 2000;
     config.wrap = true;
     config.keyboard = false;
@@ -197,6 +230,109 @@ this.precio=precio;
   }
 
 
- 
+    
+  fileProgress(fileInput: any) {
+    this.fileData = <File>fileInput.target.files[0];
+    this.preview();
 }
 
+preview() {
+  // Show preview 
+  var mimeType = this.fileData.type;
+  if (mimeType.match(/image\/*/) == null) {
+    return;
+  }
+
+  var reader = new FileReader();      
+  reader.readAsDataURL(this.fileData); 
+  reader.onload = (_event) => { 
+    this.previewUrl = reader.result; 
+  }
+}
+ 
+
+
+
+onFileChanged1(event) {
+  console.log(event.target.files.length)
+  let reader =null
+   reader = new FileReader();
+  if (event.target.files && event.target.files.length > 0) {
+    let file=[];
+     file = event.target.files[0];
+     
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      
+    
+      this.filePreview1 = reader.result.split();
+      this.filePreview1 =  this.filePreview1[0];
+      console.log(this.filePreview1.length+'seraaaaaa    '+this.filePreview1)
+    };
+    
+
+    
+  
+  }
+  event=[]
+}
+
+onFileChanged2(event) {
+  console.log(event.target.files.length)
+  
+  let reader =null
+   reader = new FileReader();
+  if (event.target.files && event.target.files.length > 0) {
+    let file=[];
+     file = event.target.files[0];
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      
+    
+      this.filePreview2 = reader.result.split();
+      this.filePreview2 =  this.filePreview2[0];
+   console.log(this.filePreview2.length+'seraaaaaa    '+this.filePreview2)
+    };
+  }
+}
+onFileChanged3(event) {
+  console.log(event.target.files.length)
+  let reader =null
+   reader = new FileReader();
+  if (event.target.files && event.target.files.length > 0) {
+    let file=[];
+     file = event.target.files[0];
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+     
+    
+      this.filePreview3 = reader.result.split();
+      this.filePreview3 =  this.filePreview3[0];
+      console.log(this.filePreview3.length+' seraaaaaa    '+this.filePreview3)
+    };
+  }
+  event=[]
+
+}
+onFileChanged4(event) {
+  console.log(event.target.files.length)
+  let reader =null
+   reader = new FileReader();
+  if (event.target.files && event.target.files.length > 0) {
+    let file=[];
+     file = event.target.files[0];
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+       
+    
+      this.filePreview4 = reader.result.split();
+      this.filePreview4 =  this.filePreview4[0];
+      console.log(this.filePreview4.length+'seraaaaaa    '+this.filePreview4)
+    };
+  }
+  event=[]
+}
+
+
+
+}
