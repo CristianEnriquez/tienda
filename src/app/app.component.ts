@@ -24,6 +24,7 @@ export class AppComponent {
 
 
 //imagenes
+sestado = false;
 
   filePreview1: string
  
@@ -83,11 +84,12 @@ this.consultaInicio();
  
   //botones Nav
   botonAvianca(){
+    this.sestado=false;
     let messagesRef = firebase
     .database()
     .ref("/aviones")
     .orderByChild("aerolinea")
-    .equalTo("Avianca");
+    .equalTo("Tame");
 
     messagesRef.on("value", snap => {
       let data = snap.val();
@@ -392,4 +394,14 @@ fin(){
   this.sendMessage()
 }
 
+
+boton5(){
+  
+  if(this.sestado == true){
+    this.sestado = false;
+  }else{
+    this.sestado = true;
+  }
 }
+}
+

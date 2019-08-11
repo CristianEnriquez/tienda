@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <div align="center">
-  <img style="width: 75%; height: 200px;" alt="Angular Logo" src="../assets/imagenes/a3.jpg">
+  <img style="width: 55%; height: 230px;" alt="Angular Logo" src="../assets/imagenes/tenor.gif">
 
 </div>
 <nav class="navbar navbar-expand-sm bg-dark"  >
@@ -11,17 +11,54 @@
       <li  style="width: 90px ;">
           <a class="dropdown-item"  (click)="consultaInicio()"><strong><i><font face="Arial,Verdana" size=6&gt; color="White" >Raíz</font></i></strong></a>
         </li>
-        <li  style="width: 90px ;"></li>
+        <li  style="width: 90px ;" ></li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" (click)="boton5()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <strong><i><font face="Arial,Verdana" size=5&gt; color="White" >Aerolínea </font></i></strong>
             
           </a>
+<div *ngIf="sestado == true">
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item"  (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Avianca </font></i></strong></a>
-            <a class="dropdown-item"  (click)="botonIberia()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Iberia </font></i></strong></a>
-            <a class="dropdown-item"  (click)="botonTame()"><strong><i><font face="Arial,Verdana" size=5&gt; color="Black" >Tame </font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >AEROLINEAS ARGENTINAS</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >AIR FORCE ONE</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >AIR FRANCE</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >ALITALIA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >AMERICAN</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >ARABIA AIR</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >AVIANCA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >AWA 787</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >BRITISH AIRWAYS</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >CANADA AIR</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >CHINA EASTERN</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >CHINA SOUTER</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >COCA COLA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >COLOMBIA AIRES</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >COPA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >DHL</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >EASY FLY</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >EMIRATES</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >ETIHAD</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >EVA AIR</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >JAPAN AIR</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >JET STAR</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >KOREAN AIR</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >LAN</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >LATAM</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >LUFTHANSA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >MALASIA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >QANTAS</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >QATAR</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >SATENA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >SATENA  FOKER</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >SAUDI ARABIA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >SINGAPORE AIR</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >TURKISH</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >UNITED</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >UNITED  AIRLINES</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >VIVA COLOMBIA</font></i></strong></a>
+            <a class="dropdown-item" (click)="botonAvianca()"><strong><i><font face="Arial,Verdana" size=1&gt; color="Black" >WINGO</font></i></strong></a>
             
+          </div>
           </div>
         </li>
         <li  style="width: 90px ;">
@@ -58,30 +95,30 @@
 -->
     <br>
 
-<div *ngIf="articuloElegido == false">
-      <div class="grid-container" >
- 
 
-
-        <div class="grid-item" *ngFor="let message of messages">
-            <img width="280px" height="280px"  src={{message.imagen1}} (click)="articuloSelect(message.imagen1,message.imagen2,message.imagen3,message.imagen4,message.nombre,message.tipo,message.aerolinea,message.precio)">
-            <table align="center">
-                <td>
-                   <tr width="100px" height="100px"><strong><i><font face="Arial,Verdana" size=4&gt; color="Black" >{{message.nombre}}<br>{{message.precio}}</font></i></strong></tr>
-                   <strong><i><font face="Arial,Verdana" size=5&gt; color="Red" >{{message.destacado}} </font></i></strong>
-                
-                </td>
-             </table>
-           
+    
+<!--Bucle-->
+<div style="justify-items: center; justify-content: center; justify-self: center; align-content: center; align-items: center;">
+  <div style="justify-items: center; justify-content: center; justify-self: center; align-items: center; align-content: center;" class="grid-container3"   *ngIf="articuloElegido == false">
+    <div style="justify-items: center; justify-content: center; justify-self: center; align-items: center; align-content: center;" class="grid-item" *ngFor="let message of messages">
+    <div class="row" style="justify-items: center; justify-content: center; justify-self: center; align-items: center; align-content: center;" width="100%"  height="100%">
             
-    
-        </div>
-    
-        
-    
-       
+                    <img style="justify-items: center; justify-content: center; justify-self: center; align-items: center; align-content: center;" width="70%"  height="60%"  alt="Angular Logo" src={{message.imagen1}} (click)="articuloSelect(message.imagen1,message.imagen2,message.imagen3,message.imagen4,message.nombre,message.tipo,message.aerolinea,message.precio)">
+               
+            
     </div>
-  </div>
+    <div class="container"  style="justify-content: center; width: 125px"  >
+            <div class="row"  >
+              <strong><i><font face="Arial,Verdana" size=6&gt; color="Black" >{{message.nombre}}</font></i></strong><br>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+  
+
+
   
   <div class="grid-container2"  *ngIf="articuloElegido == true">
 
@@ -94,26 +131,26 @@
           
             <ngb-carousel *ngIf="images">
               <ng-template  ngbSlide>
-                <img  width="500px" height="500px" [src]="images[0]" alt="Random first slide">
+                <img  width="100%" height="100%" [src]="images[0]" alt="Random first slide">
                 <div class="carousel-caption" >
               <!--    <h3>2 seconds between slides...</h3>
                   <p>This carousel uses customized default values.</p> -->
                 </div>
               </ng-template>
               <ng-template ngbSlide>
-                <img width="500px" height="500px" [src]="images[1]" alt="Random second slide">
+                <img width="100%x" height="100%" [src]="images[1]" alt="Random second slide">
                 <div class="carousel-caption">
         
                 </div>
               </ng-template>
               <ng-template ngbSlide>
-                <img width="500px" height="500px" [src]="images[2]"  alt="Random third slide">
+                <img width="100%" height="100%" [src]="images[2]"  alt="Random third slide">
                 <div class="carousel-caption">
          
                 </div>
               </ng-template>
               <ng-template ngbSlide>
-                <img width="500px" height="500px" [src]="images[3]" alt="Random fourth slide">
+                <img width="100%" height="100%" [src]="images[3]" alt="Random fourth slide">
                 <div class="carousel-caption">
              
                 </div>
@@ -133,9 +170,7 @@
       <strong><i><font face="Arial,Verdana" size=7&gt; color="Black" > {{tipo}} </font></i></strong><br>
       <h4 style="color:red;">Aerolinea</h4>
       <strong><i><font face="Arial,Verdana" size=7&gt; color="Black" > {{aerolinea}} </font></i></strong><br>
-      <h4 style="color:red;">Precio</h4>
-      <strong><i><font face="Arial,Verdana" size=7&gt; color="Black" > {{precio}} </font></i></strong><br>
-    <br>
+ <br>
       <button type="button" class="btn btn-primary" (click)="articuloSelect()">Regresar</button>
       
   </div>
@@ -185,55 +220,58 @@
 
 <br>
 -->
-<div class="grid-container3" align="center" >
- 
-    <strong><i><font face="Arial,Verdana" size=8&gt; color="White" >Contactanos</font></i></strong>
-   
-    <br>
-<tr>
-  <td>
 
-      <a href="https://www.facebook.com/luisivan.enriquez" >
-        
-          <img  width="350px" height="100px" src="../assets/imagenes/fa.png">
-         
-      </a>
-    
-  </td>
-  <td>
-      <a href="https://api.whatsapp.com/send?phone=593997630505" >
-              
-        <img  width="100px" height="100px" src="../assets/imagenes/wh.png">
+
+
+<div class="grid-container3" style="width: 100%;" style="justify-content: center" >
+  <table align="center">
+  <strong><i><font face="Arial,Verdana" size=8&gt; color="White" style="align-self: center" >Contactanos</font></i></strong>
+ 
+  <br>
+<tr>
+<td>
+
+    <a href="https://www.facebook.com/luisivan.enriquez" >
+      
+        <img  width="40%" height="40%" src="../assets/imagenes/fa.png">
        
     </a>
-  </td>
- 
+  
+</td>
+<td>
+    <a href="https://api.whatsapp.com/send?phone=593997630505" >
+            
+      <img  width="50%" height="50%" src="../assets/imagenes/wh.png">
+     
+  </a>
+</td>
+
 </tr>
 <tr>
-    <br>
-  </tr>
-    <tr>
-      
-        <td>
-            <img  width="100px" height="100px" src="../assets/imagenes/co.png">
-            <strong><i><font face="Arial,Verdana" size=7&gt; color="White" >wwe@gmail.com</font></i></strong>
-        </td>
-        <td>
-                         
-            <img  width="100px" height="100px" src="../assets/imagenes/te.png">
-            <strong><i><font face="Arial,Verdana" size=7&gt; color="White" >09 9763 0505</font></i></strong>
-                
+  <br>
+</tr>
+  <tr>
+    
+      <td>
+          <img  width="25%" height="25%" src="../assets/imagenes/co.png">
+          <strong><i><font face="Arial,Verdana" size=5&gt; color="White" >ivanenriquezr@hotmail.com</font></i></strong>
       </td>
-    </tr>
-      <table align="center">
-      
-       </table>
-     
-      
+      <td>
+                       
+          <img  width="50%" height="50%" src="../assets/imagenes/te.png">
+          <strong><i><font face="Arial,Verdana" size=5&gt; color="White" >09 9763 0505</font></i></strong>
+              
+    </td>
+    
+  </tr>
+
+    
+     </table>
+   
+    
 
 
-  
 
- 
+
+
 </div>
-  
